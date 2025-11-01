@@ -1,7 +1,37 @@
 # Cloudflare AI Chatbot
 
-## Description
-This is a Cloudflare AI-powered chatbot that remembers conversation history using Durable Objects and responds using Llama 3.3 on Workers AI.
+### Project Description
+
+This is a self-contained, single-file AI chatbot application built using **Cloudflare Workers**. It leverages a **Durable Object (DO)** for conversation memory. The entire application, including the HTML, CSS, and JavaScript frontend, is embedded directly within the Worker's `fetch` handler.
+
+This version currently implements an **Echo Response** (`Echo: [user message]`) to demonstrate data flow and Durable Object usage, but it is structured for easy integration with the Workers AI (LLM) binding.
+
+***
+
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed and configured:
+
+* **Node.js** (version 18 or higher)
+* **npm** or **yarn**
+* **Cloudflare Wrangler CLI** (`npm install -g wrangler`)
+* A **Cloudflare Account** (required for deployment).
+
+***
+
+
+## Local Development Setup
+
+Follow these steps to run the self-contained Worker locally using `wrangler dev`.
+
+### 1. Project Structure
+
+This project uses a minimal structure where the frontend is embedded in `worker.js`:
+
+### 2. Start the Local Server
+
+Run the Worker locally. `wrangler dev` will start the Worker and simulate the Durable Object binding.
 
 ## How to Run
 1. Clone the repository.
