@@ -1,0 +1,15 @@
+{
+  "name": "cf_ai_chatbot",
+  "version": "1.0.0",
+  "description": "Cloudflare AI chatbot using Workers and Durable Objects",
+  "main": "src/worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler publish"
+  },
+  "keywords": ["cloudflare", "worker", "ai", "durable-object"],
+  "author": "Stanley Shen",
+  "license": "MIT",
+  "dependencies": {}
+}
+
