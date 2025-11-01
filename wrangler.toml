@@ -1,20 +1,19 @@
+# wrangler.toml
+
 name = "cf_ai_chatbot"
 main = "src/worker.js"
-compatibility_date = "2025-10-31" 
-
-[env]
-workers_dev = true 
-account_id = "2e5a82c432a9fae16a8f72b44f9f1203"
+compatibility_date = "2025-10-31"
+account_id = "2e5a82c432a9fae16a8f72b44f9f1203" 
 
 [vars]
 # LLM_API_KEY = "your-llm-key"
 
 [durable_objects]
 bindings = [
-  { name = "CONVERSATION_MEMORY", class_name = "ConversationMemory" } 
+  # Note: The free plan DO issue should be resolved by using the correct modern syntax
+  { name = "CONVERSATION_MEMORY", class_name = "ConversationMemory" }
 ]
 
 [[migrations]]
 tag = "v1"
-new_classes = ["ConversationMemory"]
-
+new_sqlite_classes = ["ConversationMemory"]
